@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&family=Patrick+Hand&display=swap');
+
+
+body {
+    font-family: 'Patrick Hand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    position: static;
+}
+
+nav {
+    box-sizing: content-box;
+    background-color: #000000;
+    height: 66px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.menu-icons {
+    display: none;
+}
+
+
+#navbar {
+    margin: 0px 8vw;
+}
+
+#navbar>a[href="index.html"],
+#navbar>a[href="../index.html"] {
+    font-size: 28px;
+    margin-top: 5px;
+    padding: 3px 10px 3px 10px;
+    background-color: #ffa012;
+    font-family: 'Pacifico';
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    float: left;
+}
+
+
+#navlist li a {
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    font-family: 'Luckiest Guy';
+    padding: 20px 20px 25px;
+}
+
+#navlist li a:hover {
+    background-color: #2295F5;
+}
+
+#navlist {
+    margin-top: 20px;
+    width: 70vw;
+    font-weight: bold;
+    float: left;
+}
+
+#navlist li {
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+li>form {
+    margin-top: -30px;
+    margin-left: 500px;
+    width: 35vw;
+}
+
+span~form {
+    width: 100vw;
+    display: none;
+}
+
+
+input[type=search] {
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    color: white;
+}
+
+input[type=search]:focus {
+    width: 90%;
+}
+
+li>center form {
+    display: none;
+}
+
+#navbar img {
+    float: right;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.open,
+.close {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 750px) and (max-width:1160px) {
+    nav {
+        height: 120px;
+    }
+
+    #navbar {
+        margin: 0px 5vw 0px 1vw;
+    }
+
+    input[type=search]:focus {
+        width: 80%;
+    }
+
+    li>form {
+        display: none;
+    }
+
+    ul~img {
+        display: block;
+    }
+
+    #navbar>form {
+        position: absolute;
+        clear: both;
+        display: block;
+        width: 100%;
+        margin-top: 70px;
+        margin-left: 70px;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    nav {
+        height: 66px;
+        box-sizing: border-box;
+    }
+
+    #navbar>form {
+        display: none;
+    }
+
+    #navlist {
+        box-sizing: border-box;
+        position: fixed;
+        margin: 0;
+        top: 0px;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        background-color: #191919;
+        overflow-x: hidden;
+    }
+
+    .menu-icons {
+        position: relative;
+        display: block;
+        float: right;
+    }
+
+    .close {
+        display: none;
+    }
+
+    #navbar span~a>img {
+        margin-right: 28%;
+    }
+
+    nav.active .close {
+        display: block;
+    }
+
+    nav.active .open {
+        display: none;
+    }
+
+    nav.active #navlist {
+        display: flex;
+        padding-top: 5vh;
+    }
+
+    nav.active #navbar ul li {
+        margin: 4vh 0;
+        text-align: center;
+    }
+
+    nav.active #navbar ul li a:link {
+        border-bottom: 1px solid white;
+    }
+
+    nav.active #navbar ul li>form input[type=search] {
+        padding: 12px 40px 12px 40px;
+    }
+
+    li>form {
+        margin-top: 0;
+        margin-left: 0;
+        width: 95vw;
+    }
+
+    nav.active ul#navlist {
+        margin-top: 0;
+        padding-inline-start: 0;
+    }
+
+    nav.active #navbar span~a {
+        display: none;
+    }
+
+    nav.active #navbar img {
+        margin-top: 37px;
+        margin-left: -30px;
+    }
+
+    nav.active .close {
+        position: fixed;
+        padding-right: 1000px;
+    }
+
+
+}
+
+a {
+    text-decoration: none;
+}

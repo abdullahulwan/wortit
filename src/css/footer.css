@@ -1,0 +1,37 @@
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: #25282B;
+    text-align: center;
+    font-weight: bold;
+    clear: both;
+}
+
+footer>div>a[href="index.html"],
+footer>div>a[href="../index.html"] {
+    font-size: 32px;
+    padding: 3px 10px 3px 10px;
+    background-color: #ffa012;
+    font-family: 'Pacifico';
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+footer>div>a>img {
+    margin-top: 10px;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+@media only screen and (min-height:1100px) and(max-height:10000px) {
+    footer {
+        position: absolute;
+        bottom: 0px;
+    }
+}
